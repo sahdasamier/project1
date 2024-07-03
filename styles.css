@@ -1,0 +1,406 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-form, .login-promo {
+    width: 50%;
+    padding: 130px;
+    box-sizing: border-box;
+}
+
+.login-form {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.login-form p {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input-icon {
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    background: linear-gradient(99.78deg, #9181F4 -5.85%, #5038ED 109.55%);
+    box-shadow: 0px 8px 21px rgba(0, 0, 0, 0.16);
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 124px;
+    font-size: 1em;
+    height: 52px;
+    font-family: 'Poppins';
+    margin-bottom: 1em;
+}
+
+.login-others {
+    margin-top: 0.1em;
+    text-align: center;
+}
+
+.login-others button {
+    margin-top: 15px;
+    background-color: #fff;
+    font-family: 'Poppins';
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+}
+
+.login-others span {
+    font-weight: bold;
+}
+
+div {
+    padding: 5px;
+}
+
+.login-others p {
+    font-size: 14px;
+}
+
+.login-others p1 {
+    padding-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+p1::before,
+p1::after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+p1::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+p1::after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.login-promo {
+    background-image: url('images/background.png'), linear-gradient(217.64deg, #9181F4 -5.84%, #5038ED 106.73%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    border-left: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.rectangle {
+    width: 350px;
+    height: 390px;
+    background: rgba(255, 255, 255, 0.21);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(6.8px);
+    border-radius: 46px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+.promo-content {
+    font-family: 'Poppins';
+    font-style: normal;
+    width: 130px;
+    line-height: 30px;
+    color: #1d1a1a;
+    font-size: 1.8em;
+    font-weight: bold;
+    max-width: 300px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.promo-img {
+    position: absolute;
+    width: 590px;
+    height: 365px;
+    right: -90px;
+    top: 25px;
+    z-index: 0;
+}
+
+.energy-img {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    right: 310px;
+    top: 250px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .login {
+        flex-direction: column;
+        width: 90%;
+        max-width: none;
+    }
+
+    .login-form, .login-promo {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .promo-img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .energy-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .login-form, .login-promo {
+        padding: 10px;
+    }
+
+    .promo-content {
+        font-size: 1.4em;
+    }
+
+    .promo-img {
+        max-width: 200px;
+    }
+
+    .energy-img {
+        max-width: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .login {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .login-form, .login-promo {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .login-form {
+        order: 2; 
+    }
+
+    .login-promo {
+        order: 1; 
+    }
+
+    .promo-img {
+        position: relative;
+        width: 100%;
+        max-width: 250px;
+        margin: 20px auto;
+    }
+
+    .energy-img {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: 20px auto;
+    }
+
+    .rectangle {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .promo-content {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .login {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .login-form h1 {
+        font-size: 1.5em;
+    }
+
+    .login-form form {
+        max-width: 100%;
+    }
+
+    .promo-content {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+
+    .promo-img {
+        max-width: 150px;
+        margin: 10px auto;
+    }
+
+    .energy-img {
+        max-width: 30px;
+        margin: 10px auto;
+    }
+
+    .rectangle {
+        width: 100%;
+        padding: 5px;
+        margin: 5px auto;
+    }
+}
+@media (max-width: 480px) {
+    .login {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .login-form h1 {
+        font-size: 1.5em;
+    }
+
+    .login-form form {
+        max-width: 100%;
+    }
+
+    .promo-content {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+
+    .promo-img {
+        max-width: 150px;
+        margin: 10px auto;
+    }
+
+    .energy-img {
+        max-width: 30px;
+        margin: 10px auto;
+    }
+
+    .rectangle {
+        width: 100%;
+        padding: 5px;
+        margin: 5px auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .login {
+        flex-direction: column;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .login-form, .login-promo {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .login-form h1 {
+        font-size: 1.2em;
+    }
+
+    .promo-content {
+        font-size: 0.8em;
+    }
+
+    .promo-img {
+        max-width: 100px;
+    }
+
+    .energy-img {
+        max-width: 20px;
+    }
+
+    .rectangle {
+        width: 100%;
+        padding: 5px;
+        margin: 5px auto;
+    }
+}
